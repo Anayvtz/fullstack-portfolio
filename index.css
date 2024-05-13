@@ -43,11 +43,11 @@ nav {
     right: 240px;
 }
 
-nav,
+/* nav,
 .hamburger {
     width: 500px;
     height: 40px;
-}
+} */
 
 .hamburger {
     font-size: 1.4em;
