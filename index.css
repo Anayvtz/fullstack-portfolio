@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: grey;
+}
+
+.container1 {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    background-color: rgba(135, 206, 250, 0.5);
+    width: 100%;
+}
+
+header {
+    color: grey;
+    line-height: 2;
+}
+
+.container1 header h4 {
+    position: absolute;
+    top: 20px;
+    left: 90px;
+}
+
+.personalImg1 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+nav {
+    position: absolute;
+    top: 10px;
+    right: 240px;
+}
+
+nav,
+.hamburger {
+    width: 500px;
+    height: 40px;
+}
+
+.hamburger {
+    font-size: 1.4em;
+    color: black;
+    padding: 5px 8px;
+    display: none;
+    /* position: absolute;
+    top: 10px;
+    /*  right: 10px; *
+    left: 550px; */
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    /* display: flex;
+    flex-direction: row;
+    flex-basis: 30px; */
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    /* flex-basis: 30px; */
+    color: black;
+    width: 100px;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 1rem;
+    line-height: 2;
+    text-align: center;
+}
+
+.container2 {
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    height: 400px;
+    text-align: center;
+    background-image: url("images/geometry.webp");
+    /*background-image: url("images/bak.jpg");*/
+    background-repeat: no-repeat;
+    /*background-repeat: repeat-y;*/
+    /*  background-position: bottom right; */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+@media (max-width:600px) {
+    .hamburger {
+        display: block;
+        /* border-bottom: 1px solid #fff; */
+        width: 40px;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        left: 590px;
+    }
+
+    nav,
+    nav ul li {
+        width: 100%;
+        float: none;
+        background-color: white;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    /*  nav .hamburger:hover+ul */
+    nav .hamburger:hover+ul {
+        display: block;
+    }
+}
