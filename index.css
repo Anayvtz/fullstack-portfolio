@@ -4,43 +4,51 @@
     box-sizing: border-box;
 }
 
-html {
+/* html {
     scroll-behavior: smooth;
-}
+} */
 
 body {
     background-color: grey;
-}
-
-.container1 {
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    background-color: rgba(135, 206, 250, 0.5);
-    width: 100%;
+    --header-height: 64px;
 }
 
 header {
+    display: flex;
+    align-items: center;
+    /* flex-direction: row; */
+    position: fixed;
+    top: 0px;
+    height: 64px;
+    background-color: rgba(135, 206, 250, 0.5);
+    width: 100%;
     color: grey;
-    line-height: 2;
+    z-index: 1;
+    /*  line-height: 2; */
 }
 
-.container1 header h4 {
+.spacer {
+    flex-grow: 1;
+}
+
+/* header h4 {
     position: absolute;
     top: 20px;
     left: 90px;
-}
+} */
 
-.personalImg1 {
+#personalImg1 {
     width: 60px;
     height: 60px;
     border-radius: 50%;
 }
 
 nav {
-    position: absolute;
-    top: 10px;
-    right: 240px;
+    /*  position: absolute;
+    top: 20px;
+    right: 50px; */
+
+    /* float: left;*/
 }
 
 /* nav,
@@ -62,67 +70,142 @@ nav {
 
 nav ul {
     list-style-type: none;
+    /* flex-basis: 100px; */
+    display: flex;
+    /* flex-direction: row; */
+    /*  display: none; */
+    /*  float: left; */
 }
 
 nav ul li {
+    /* flex-direction: row; */
+    /*  */
+    /* flex-basis: 100px; */
+    /* float: none; */
     /* display: flex;
     flex-direction: row;
     flex-basis: 30px; */
-    float: left;
+    /*  float: left; */
 }
 
 nav ul li a {
     display: block;
+
     /* flex-basis: 30px; */
     color: black;
     width: 100px;
     text-decoration: none;
-    padding: 10px;
+    /* padding: 10px; */
     font-size: 1rem;
     line-height: 2;
     text-align: center;
 }
 
-.container2 {
-    position: absolute;
-    top: 80px;
-    width: 100%;
-    height: 400px;
+#main {
+    /* position: absolute;
+    top: 80px; */
+    /* width: 100%; */
+    /* height: 200px; */
+    padding: 16px;
     text-align: center;
-    background-image: url("images/geometry.webp");
-    /*background-image: url("images/bak.jpg");*/
+    margin-top: 64px;
+    line-height: 1.5;
+    background-image: url("images/wave.jpeg");
     background-repeat: no-repeat;
     /*background-repeat: repeat-y;*/
     /*  background-position: bottom right; */
     background-size: cover;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 }
 
+#main h2 {
+    color: lightskyblue;
+    font-size: 3em;
+    /*  line-height: 2; */
+}
+
+#main p {
+    color: lightskyblue;
+    font-size: 1.5em;
+    line-height: 1.5;
+}
+
+#about {
+    /*    position: absolute;
+    top: 300px;
+    width: 100%;
+    height: 200px; */
+    text-align: center;
+    line-height: 1.5;
+    padding: 16px;
+}
+
+#about>div {
+    display: flex;
+    text-align: left;
+    align-items: center;
+}
+
+#aboutImage {
+    padding: 20px;
+}
+
+#aboutImage img {
+    border-radius: 50%;
+    display: block;
+    width: 200px;
+    height: 200px;
+}
 
 @media (max-width:600px) {
     .hamburger {
         display: block;
         /* border-bottom: 1px solid #fff; */
         width: 40px;
-        position: absolute;
+        /*  position: absolute;
         right: 0px;
         top: 0px;
-        left: 590px;
+        left: 590px; */
     }
 
-    nav,
-    nav ul li {
-        width: 100%;
-        float: none;
-        background-color: white;
+    header .spacer {
+        /*  display: none; */
     }
+
+    nav {
+        /*  width: 100%; */
+    }
+
+    nav ul li {
+        /*  float: none; */
+        /* flex-direction: column; */
+        /*  background-color: white; */
+    }
+
+
 
     nav ul {
         display: none;
+        background-color: white;
+        /* flex-direction: column; */
+        position: absolute;
+        right: 0;
+        top: 100%;
     }
 
     /*  nav .hamburger:hover+ul */
     nav .hamburger:hover+ul {
-        display: block;
+        display: flex;
+        /* background-color: aqua; */
+    }
+
+    #about>div {
+        /*  flex-direction: column; */
+        text-align: center;
+
+    }
+
+    .breakMobile {
+        flex-direction: column;
     }
 }

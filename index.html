@@ -9,25 +9,43 @@
 </head>
 
 <body>
-    <div class="container1">
-        <img class="personalImg1" src="images/personalImage.jpg" alt="personalImage">
-        <header>
-            <h4>Limor Yavetz</h4>
-        </header>
+
+
+    <header>
+        <img id="personalImg1" src="images/personalImage.jpg" alt="personalImage">
+        <h4>Limor Yavetz</h4>
+        <span class="spacer"></span>
         <nav>
             <div class="hamburger">&#9776;</div>
-            <ul>
+            <ul class="breakMobile">
                 <li><a href="#main">Main</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#srvc">Services</a></li>
                 <li><a href="#contact">Contant</a></li>
             </ul>
         </nav>
-    </div>
-    <div class="container2">
+    </header>
+
+    <section id="main">
         <h2>Projects Case</h2>
         <p>Following projects are part of the projects i have developed during my fullstack course at hackeru.</p>
-    </div>
+    </section>
+    <section id="about">
+        <h2>about me</h2>
+        <div class="breakMobile">
+            <div id="aboutImage">
+                <img src="images/personalImage.jpg" alt="personal image">
+            </div>
+            <p>I have a BSc degree in computer science and economics from Tel-Aviv University. I have been working as a
+                c++
+                software developer for 19 years. I needed to take a break from work in order to take care of my mother,
+                so
+                when i have tried to return to work i hadno interviews, every company saying i am not working for too
+                long
+                atime. So, i have decided to start learning fullstack and finding a job as junior all over again.
+            </p>
+        </div>
+    </section>
 </body>
 
 </html>
