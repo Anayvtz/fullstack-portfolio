@@ -81,10 +81,24 @@ nav ul li a {
     line-height: 1.5;
 }
 
+#icons {
+    background-color: white;
+    text-align: center;
+}
+
+#icons img {
+    width: 60px;
+    height: 60px;
+}
+
 #about {
     text-align: center;
     line-height: 1.5;
     padding: 16px;
+}
+
+#about h2 {
+    font-size: 2em;
 }
 
 #about>div {
