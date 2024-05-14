@@ -19,7 +19,7 @@ header {
     position: fixed;
     top: 0px;
     height: 64px;
-    background-color: rgba(135, 206, 250, 0.5);
+    background-color: rgb(135, 206, 250);
     width: 100%;
     color: grey;
     z-index: 1;
@@ -130,6 +130,56 @@ nav ul li a {
     border-radius: 15px;
 }
 
+#gallery {
+    width: 90vw;
+    background-color: grey;
+    padding: 20px;
+    border: 1px solid #000;
+    margin: 15px auto 15px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.project {
+    width: 300px;
+    border: 1px solid #000;
+    padding: 20px;
+    margin: 15px;
+    background-color: rgba(135, 206, 250, 0.5);
+}
+
+.project img {
+    display: block;
+    width: 200px;
+    margin: 15px auto;
+}
+
+.project p {
+    width: 90%;
+    margin: 0 auto;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+.project a {
+    display: block;
+    width: 150px;
+    padding: 10px 15px;
+    background-color: black;
+    color: grey;
+    text-decoration: none;
+    margin: 15px auto;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.project a:hover {
+    background-color: #00a2ff;
+    color: black;
+}
+
 @media (max-width:600px) {
     .hamburger {
         display: block;
@@ -139,7 +189,7 @@ nav ul li a {
 
     nav ul {
         display: none;
-        background-color: white;
+        background-color: black;
         /* flex-direction: column; */
         position: absolute;
         right: 0;
@@ -159,5 +209,13 @@ nav ul li a {
 
     .breakMobile {
         flex-direction: column;
+    }
+
+    #gallery {
+        flex-direction: column;
+    }
+
+    .project {
+        margin: 15px auto;
     }
 }
