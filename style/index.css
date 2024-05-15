@@ -15,7 +15,6 @@ body {
 header {
     display: flex;
     align-items: center;
-    /* flex-direction: row; */
     position: fixed;
     top: 0px;
     height: 64px;
@@ -45,7 +44,6 @@ header {
 nav ul {
     list-style-type: none;
     display: flex;
-    /* flex-direction: row; */
 }
 
 nav ul li a {
@@ -58,7 +56,8 @@ nav ul li a {
     text-align: center;
 }
 
-#main {
+#mainSection {
+    position: relative;
     padding: 16px;
     text-align: center;
     margin-top: 64px;
@@ -66,16 +65,14 @@ nav ul li a {
     background-image: url("images/wave.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-attachment: fixed; */
 }
 
-#main h2 {
+#mainSection h2 {
     color: lightskyblue;
     font-size: 3em;
-    /*  line-height: 2; */
 }
 
-#main p {
+#mainSection p {
     color: lightskyblue;
     font-size: 1.5em;
     line-height: 1.5;
@@ -91,17 +88,18 @@ nav ul li a {
     height: 60px;
 }
 
-#about {
+#aboutSection {
+    position: relative;
     text-align: center;
     line-height: 1.5;
     padding: 16px;
 }
 
-#about h2 {
+#aboutSection h2 {
     font-size: 2em;
 }
 
-#about>div {
+#aboutSection>div {
     display: flex;
     text-align: left;
     align-items: center;
@@ -118,7 +116,7 @@ nav ul li a {
     height: 200px;
 }
 
-#about a {
+#aboutSection a {
     display: block;
     width: 150px;
     padding: 10px 15px;
@@ -133,18 +131,20 @@ nav ul li a {
 #galleryTitle {
     font-size: 2.5em;
     text-align: center;
-    margin-top: 100px;
+    margin-bottom: 35px;
 }
 
-#gallery {
-    width: 90vw;
+#gallerySection {
+    position: relative;
     background-color: grey;
     padding: 20px;
-    /* border: 1px solid #000; */
-    margin: 15px auto 15px;
+}
+
+#gallerySection ul {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    list-style-type: none;
 }
 
 .project {
@@ -209,28 +209,39 @@ footer a img {
     height: 30px;
 }
 
+.scrollStop {
+    position: absolute;
+    top: -64px;
+}
+
 @media (max-width:600px) {
     .hamburger {
-        display: block;
+        display: flex;
         /* border-bottom: 1px solid #fff; */
         width: 40px;
+        align-items: center;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    nav {
+        height: 100%;
     }
 
     nav ul {
         display: none;
         background-color: black;
-        /* flex-direction: column; */
         position: absolute;
         right: 0;
         top: 100%;
     }
 
-    nav .hamburger:hover+ul {
+    nav .hamburger:hover+ul,
+    nav ul:hover {
         display: flex;
     }
 
-    #about>div {
-        /*  flex-direction: column; */
+    #aboutSection>div {
         text-align: center;
 
     }
@@ -238,10 +249,6 @@ footer a img {
     .breakMobile {
         flex-direction: column;
     }
-
-    /*  #gallery {
-        flex-direction: column;
-    } */
 
     .project {
         margin: 15px auto;
