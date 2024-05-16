@@ -147,6 +147,11 @@ nav ul li a {
     list-style-type: none;
 }
 
+#gallerySection ul li h3 {
+    text-align: center;
+    padding: 10px;
+}
+
 .project {
     width: 300px;
     border: 1px solid #000;
